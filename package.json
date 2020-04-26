@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js"
+    "dev": "env-cmd -f ./config/dev.env nodemon src/index.js",
+    "test": "env-cmd -f ./config/test.env jest --watch --runInBand"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "author": "Nikunj Dalsaniya",
   "license": "ISC",
@@ -18,10 +22,12 @@
     "mongoose": "^5.9.7",
     "multer": "^1.4.2",
     "sharp": "^0.25.2",
+    "supertest": "^4.0.2",
     "validator": "^13.0.0"
   },
   "devDependencies": {
     "env-cmd": "^10.1.0",
+    "jest": "^25.3.0",
     "nodemon": "^2.0.2"
   }
 }

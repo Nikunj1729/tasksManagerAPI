@@ -10,7 +10,6 @@ const sendWelcomeEmail = async (email, name) => {
       subject: "Thanks for joining in!",
       text: `Welcome to the app ${name}. Let me know how you get along with the app.`,
     });
-    console.log("email, name", email, name);
   } catch (error) {
     console.error(error.toString());
     const { message, code, response } = error;
